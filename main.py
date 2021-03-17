@@ -64,8 +64,7 @@ def follow():
     if list == 0:
         list = reserve
     con = random.choice(list)
-
-    search_results4 = api.search(q=con, count=20, result_type='recent')
+    search_results = api.search(q=con, count=20, result_type='recent')
     for result in search_results:
         user_id = result.user._json['id']
         try:
